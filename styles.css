@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper-section-top {
+  width: 100%;
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 20rem;
+}
+
+.wrap-slide {
+  width: 66.67%;
+  border-radius: 15px;
+}
+
+.img-slide {
+  width: 100%;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
+}
+
+.slick-dots {
+  margin: -40px 0 !important;
+  bottom: unset !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff671d !important;
+  opacity: 1 !important;
+}
+
+.slick-dots li button:before {
+  font-size: 15px !important;
+  color: #fff !important;
+}
+
+.form {
+  width: 33.33%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 0 15px;
+  background-color: #0005;
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+.form .wrapper-form-option {
+  width: 50%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 0.5rem;
+  margin: 0 5px;
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #ff671d;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+}
+
+.wrapper-label-dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.label-dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 3rem;
+  width: 25%;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.bg-orange {
+  background-color: #eb643a;
+  color: #fff;
+}
+
+.bg-gray {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.dropdown-content {
+  width: 75%;
+  height: 3rem;
+  font-size: 16px;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background: #fff;
+}
+
+.wrapper-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper-btn .submit {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 15px 35px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #fff;
+  border: unset;
+  border-radius: 10px;
+  background: #ccc;
+}
+/*# sourceMappingURL=styles.css.map */

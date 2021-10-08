@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper-section-top">
+      <div class="wrap-slide">
+        <div>
+          <img
+            class="img-slide"
+            src="https://www.mobilku.com/storage/Banner/$2y$10$xvtW6NggirN3XvFhqanRnOOGnIzXytG6oCXB0DghmDBdKt73DnJva.jpeg"
+            alt="slide-1"
+          />
+        </div>
+        <div>
+          <img
+            class="img-slide"
+            src="https://www.mobilku.com/storage/Banner/$2y$10$4pdnN2RCD3hCJaeK6qaRdO.ln7mM4MDP6vYPgAdMBiFqy9QGJAO.jpg"
+            alt="slide-1"
+          />
+        </div>
+        <div>
+          <img
+            class="img-slide"
+            src="https://www.mobilku.com/storage/Banner/$2y$10$YRfSAH7sMIOwuy8isfWyhu6cCk6e.PEqa59bHFQybM0qTtorwnvBq.jpg"
+            alt="slide-1"
+          />
+        </div>
+      </div>
+      <div class="form">
+        <div class="d-flex">
+          <div class="wrapper-form-option">
+            <label class="container" id="beli"
+              >Beli
+              <input
+                type="radio"
+                checked="checked"
+                name="radio"
+                onclick="HideBeli()"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="wrapper-form-option">
+            <label class="container"
+              >Jual
+              <input type="radio" name="radio" onclick="ShowBeli()" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+        <div class="wrapper-label-dropdown">
+          <div class="label-dropdown bg-orange">Merek</div>
+
+          <select class="dropdown-content">
+            <option value="">test</option>
+          </select>
+        </div>
+        <div class="wrapper-label-dropdown">
+          <div class="label-dropdown bg-orange">Model</div>
+
+          <select class="dropdown-content">
+            <option value="">test</option>
+          </select>
+        </div>
+        <div class="wrapper-label-dropdown">
+          <div class="label-dropdown bg-orange">Tipe</div>
+
+          <select class="dropdown-content">
+            <option value="">test</option>
+          </select>
+        </div>
+        <div class="wrapper-label-dropdown">
+          <div class="label-dropdown bg-orange">Tahun</div>
+
+          <select class="dropdown-content">
+            <option value="">test</option>
+          </select>
+        </div>
+        <div class="wrapper-label-dropdown">
+          <div class="label-dropdown bg-orange">Transmisi</div>
+
+          <select class="dropdown-content">
+            <option value="">test</option>
+          </select>
+        </div>
+
+        <div id="content-jual" style="display: none">
+          <div class="wrapper-label-dropdown">
+            <div class="label-dropdown bg-orange">Kota</div>
+
+            <select class="dropdown-content">
+              <option value="">test</option>
+            </select>
+          </div>
+          <div class="wrapper-label-dropdown">
+            <div class="label-dropdown bg-orange">+62</div>
+
+            <select class="dropdown-content">
+              <option value="">test</option>
+            </select>
+          </div>
+        </div>
+        <div class="wrapper-btn">
+          <button class="submit">SUBMIT</button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script>
+      $(".wrap-slide").slick({
+        dots: true,
+        infinite: true,
+        arrows: false,
+        autoplay: true,
+        speed: 1000,
+      });
+
+      function ShowBeli() {
+        console.log("show");
+        $("#content-jual").css("display", "block");
+      }
+      function HideBeli() {
+        console.log("hide");
+        $("#content-jual").css("display", "none");
+      }
+    </script>
+  </body>
+</html>
