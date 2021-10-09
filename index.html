@@ -13,10 +13,89 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
     <title>Document</title>
   </head>
   <body>
-    <div class="wrapper-section-top">
+    <div class="for-desktop">
+      <div class="header-desktop">
+        <div class="wrapper-content-header">
+          <div class="logo-img">
+            <img
+              src="https://www.mobilku.com/_nuxt/img/a8376d9.svg"
+              alt="logo"
+              style="width: 8.5rem"
+            />
+          </div>
+
+          <div class="wrapper-btn-dropdown">
+            <div class="dropdown">
+              <button class="dropbtn">NEWS</button>
+              <div class="dropdown-content-menu">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">BELI</button>
+              <div class="dropdown-content-menu">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">JUAL</button>
+              <div class="dropdown-content-menu">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn-sewa">SEWA</button>
+            </div>
+          </div>
+
+          <div style="position: relative">
+            <div class="text-account" onclick="showDropDownMobil()">
+              My MOBILKU
+            </div>
+            <div class="wrapper-content-my-mobilku" id="mobilku">
+              <div class="btn-mobilku btn-dark">MASUK</div>
+              <div class="btn-mobilku btn-danger">DAFTAR</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="for-mobile" style="width: 100%">
+      <div class="header-mobile">
+        <div class="logo-img">
+          <img
+            src="https://www.mobilku.com/_nuxt/img/a8376d9.svg"
+            alt="logo"
+            style="width: 5.5rem"
+          />
+        </div>
+        <div class="logo-menu" onclick="ShowMenuMobile()">
+          <i class="fa fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="content-menu-mobile" id="menu-mobile">
+        <div style="text-align: right" onclick="CloseMenuMobile()">exit</div>
+        <!-- CONTEN MENU -->
+      </div>
+    </div>
+
+    <!-- <div class="wrapper-section-top">
       <div class="wrap-slide">
         <div>
           <img
@@ -118,7 +197,7 @@
           <button class="submit">SUBMIT</button>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
@@ -143,6 +222,18 @@
       function HideBeli() {
         console.log("hide");
         $("#content-jual").css("display", "none");
+      }
+      function showDropDownMobil() {
+        $("#mobilku").toggle();
+      }
+      function ShowMenuMobile() {
+        $("#menu-mobile").toggle();
+      }
+      function ShowMenuMobile() {
+        $("#menu-mobile").addClass("conten-show-menu-mobile");
+      }
+      function CloseMenuMobile() {
+        $("#menu-mobile").removeClass("conten-show-menu-mobile");
       }
     </script>
   </body>
