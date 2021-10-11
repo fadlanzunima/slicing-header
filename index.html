@@ -75,25 +75,71 @@
       </div>
     </div>
 
-    <div class="for-mobile" style="width: 100%">
-      <div class="header-mobile">
-        <div class="logo-img">
-          <img
-            src="https://www.mobilku.com/_nuxt/img/a8376d9.svg"
-            alt="logo"
-            style="width: 5.5rem"
-          />
+    <div class="for-mobile" id="content-menu-mobile">
+      <div style="width: 100%">
+        <div class="header-mobile">
+          <div class="logo-img">
+            <img
+              src="https://www.mobilku.com/_nuxt/img/a8376d9.svg"
+              alt="logo"
+              style="width: 5.5rem"
+            />
+          </div>
+          <div class="logo-menu" onclick="ShowMenuMobile()">
+            <i class="fa fa-bars"></i>
+          </div>
         </div>
-        <div class="logo-menu" onclick="ShowMenuMobile()">
-          <i class="fa fa-bars"></i>
-        </div>
-      </div>
 
-      <div class="content-menu-mobile" id="menu-mobile">
-        <div style="text-align: right" onclick="CloseMenuMobile()">exit</div>
-        <!-- CONTEN MENU -->
+        <!-- MOBILE MENU -->
+
+        <div class="content-menu-mobile" id="menu-mobile">
+          <div class="wrapper-top">
+            <div
+              style="text-align: right; width: 100%"
+              onclick="CloseMenuMobile()"
+            >
+              exit
+            </div>
+          </div>
+
+          <!-- CONTEN MENU -->
+          <div style="position: relative">
+            <div>
+              <div class="menu-mobile" onclick="showNewsMenu()">NEWS</div>
+              <div id="menu-news">
+                <div class="sub-menu-mobile">AUTO NEWS</div>
+                <div class="sub-menu-mobile">AUTO NEWS</div>
+              </div>
+            </div>
+            <div>
+              <div class="menu-mobile" onclick="showBeliMenu()">BELI</div>
+              <div id="menu-beli">
+                <div class="sub-menu-mobile">AUTO NEWS</div>
+                <div class="sub-menu-mobile">AUTO NEWS</div>
+              </div>
+            </div>
+            <div>
+              <div class="menu-mobile" onclick="showJualMenu()">JUAL</div>
+              <div id="menu-jual">
+                <div class="sub-menu-mobile">AUTO NEWS</div>
+                <div class="sub-menu-mobile">AUTO NEWS</div>
+              </div>
+            </div>
+            <div>
+              <div class="menu-mobile-diff">SEWA</div>
+            </div>
+          </div>
+          <div class="wrapper-content-my-mobilku-mobile">
+            <div class="btn-mobilku btn-dark" style="margin-bottom: 1rem">
+              MASUK
+            </div>
+            <div class="btn-mobilku btn-danger">DAFTAR</div>
+          </div>
+          <!-- CONTEN MENU -->
+        </div>
       </div>
     </div>
+    <!-- MOBILE MENU -->
 
     <!-- <div class="wrapper-section-top">
       <div class="wrap-slide">
@@ -199,7 +245,7 @@
       </div>
     </div> -->
     <!-- FOOTER SECTION -->
-    <div id="footer">
+    <!-- <div id="footer">
       <div class="text-footer">
         <h1 class="text-white">Kebijakan Privasi</h1>
         <h1 class="text-white">About Us</h1>
@@ -230,7 +276,7 @@
           />
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- FOOTER SECTION -->
 
     <script
@@ -260,15 +306,30 @@
       function showDropDownMobil() {
         $("#mobilku").toggle();
       }
+
+      // JS MENU MOBILE
       function ShowMenuMobile() {
         $("#menu-mobile").toggle();
       }
       function ShowMenuMobile() {
         $("#menu-mobile").addClass("conten-show-menu-mobile");
+        $("#content-menu-mobile").addClass("bg-mobile");
       }
       function CloseMenuMobile() {
         $("#menu-mobile").removeClass("conten-show-menu-mobile");
+        $("#content-menu-mobile").removeClass("bg-mobile");
       }
+
+      function showNewsMenu() {
+        $("#menu-news").fadeToggle("slow", "linear");
+      }
+      function showBeliMenu() {
+        $("#menu-beli").fadeToggle("slow", "linear");
+      }
+      function showJualMenu() {
+        $("#menu-jual").fadeToggle("slow", "linear");
+      }
+      // JS MENU MOBILE
     </script>
   </body>
 </html>

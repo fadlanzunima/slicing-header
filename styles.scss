@@ -379,6 +379,7 @@ body {
   align-items: center;
 }
 
+//MOBILE MENU
 .content-menu-mobile {
   position: fixed;
   top: 0;
@@ -395,6 +396,96 @@ body {
   transition: all 0.5s ease-in;
   visibility: visible;
 }
+
+.wrapper-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff05;
+  height: 3rem;
+}
+
+.menu-mobile {
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  position: relative;
+  border-bottom: 1px solid #ffffff05;
+}
+
+.menu-mobile:hover {
+  color: #ff671d;
+}
+
+.menu-mobile::after {
+  content: "";
+  border: 4px solid #0000;
+  border-top-color: #ff671d;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 4px;
+  bottom: 0;
+  margin: auto;
+  right: 10px;
+}
+
+.menu-mobile-diff {
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  position: relative;
+  border-bottom: 1px solid #ffffff05;
+}
+
+.menu-mobile-diff:hover {
+  color: #ff671d;
+}
+
+.sub-menu-mobile {
+  color: white;
+  padding: 15px 15px 15px 38px;
+  background-color: #394c5c;
+  border-bottom: 1px solid #ffffff05;
+}
+
+.wrapper-content-my-mobilku-mobile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  padding: 10px;
+  margin-top: 3rem;
+}
+
+#menu-news {
+  display: none;
+}
+#menu-beli {
+  display: none;
+}
+#menu-jual {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .btn-mobilku {
+    width: calc((22rem -10px) / 2);
+    margin-bottom: 0;
+  }
+}
+
+.bg-mobile {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+//MOBILE MENU
 
 // FOOTER SECTION
 
